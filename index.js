@@ -37,6 +37,31 @@ const getRandomMove = () => {
   };
   
   const updateDOM = (moveOne, moveTwo, outcome) => {
+    const playerOneMoveimg = document.getElementById("player-one-move__img");
+   
+    console.log(playerOneMoveimg);
+    playerOneMoveimg.setAttribute("src", `./images/${moveOne}.png`);
+    const playerTwoMoveimg=document.getElementById("player-two-move__img")
+    playerTwoMoveimg.setAttribute("src", `./images/${moveTwo}.png`);
+    
+    console.log(playerTwoMoveimg);
+    
+    const para = document.createElement("p");
+    para.className="outcome";
+    para.id="outcome";
+    const node = document.createTextNode(outcome);
+
+    para.appendChild(node);
+
+    document.body.appendChild(para);
+
+
+
+   // outcome = getOutcome(moveOne,moveTwo)
+    console.log(outcome);
+    
+  
+
     // TODO Implement this method to update the DOM
     // There are some images you can use in the images directory
   };
